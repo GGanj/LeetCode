@@ -1,0 +1,20 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    // auto selected a compile & build task before launch .exe
+    {
+    "name": "cl.exe build and debug leetCode program",
+    "type": "cppvsdbg",
+    "request": "launch",
+    "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "environment": [],
+    "externalConsole": true,
+    "preLaunchTask": "C/C++: cl.exe create leetCode program"    
+  }]
+}

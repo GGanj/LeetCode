@@ -1,0 +1,44 @@
+// config compile & build task
+{
+  "version": "2.0.0",
+  // support running VS Code outside of the Developer Command Prompt
+  "windows": {
+    "options": {
+      "shell": {
+        "executable": "cmd.exe",
+        "args": [
+          "/C",
+          "\"E:\\VS2019\\Common7\\Tools\\VsDevCmd.bat\"",
+          "&&"
+        ]
+      }
+    }
+  },
+  // config task info
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "C/C++: cl.exe create leetCode program",
+      "command": "cl.exe",
+      "args": [
+        "/Zi",
+        "/EHsc",
+        "/nologo",
+        "/Fe:",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "${file}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$msCompile"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "调试器生成的任务。"
+    }
+  ],
+}
