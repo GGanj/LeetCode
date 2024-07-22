@@ -78,9 +78,6 @@ public:
                             if(fillSudoku(board, colIndex + (rowIndex + 1) / 9, (rowIndex + 1) % 9)) {
                                 return true;
                             }
-                            // if(fillSudoku(board)) {
-                            //     return true;
-                            // }
                             board[colIndex][rowIndex] = '.';
                         }
                     }

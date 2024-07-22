@@ -55,22 +55,22 @@
 class Solution {
 public:
     double myPow(double x, int n) {
-        if(x == 1) {
+        if(n == 0 || x == 1) {
             return 1;
         }
+
         double res = 1;
-        if(n > 0) {
-            while(n > 0) {
-                res *= x;
-                --n;
-            }
-        }
+
         if(n < 0) {
-            while(n < 0) {
+            x = 1/x;
+        }
+
+        while(n != 0) {
+            if(n % 2 == 1 || n % 2 == -1) {
                 res *= x;
-                ++n;
             }
-            res = 1 / res;
+            x *= x;
+            n /= 2;
         }
         return res;
     }
